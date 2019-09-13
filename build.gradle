@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "io.freefair.lombok" version "4.1.0"
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+def lombokVersion = '1.18.10'
+def vavrVersion = '0.10.2'
+def cucumberVersion = '4.7.1'
+def junitVersion = '5.5.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compile group: 'io.vavr', name: 'vavr', version: "${vavrVersion}"
+
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:${junitVersion}"}
+
+test {
+    useJUnitPlatform()
+}
