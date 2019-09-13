@@ -2,13 +2,12 @@ package agilestacks.template.validation.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
+import reactor.core.publisher.Flux;
 
 @Getter
 @Setter
 class Template {
 
-    private List<Stack> stacks;
+    private Flux<Stack> stacks;
 
 }

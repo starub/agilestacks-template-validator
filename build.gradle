@@ -21,6 +21,7 @@ dependencies {
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     compile group: 'io.vavr', name: 'vavr', version: "${vavrVersion}"
+    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.2.12.RELEASE'
 
     testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
     testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
