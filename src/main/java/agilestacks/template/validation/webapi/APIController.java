@@ -23,13 +23,13 @@ class APIController {
     private final TemplateRepository templateRepository;
 
     @GetMapping
-    @ApiOperation("Returns all templates")
+    @ApiOperation("Return all templates")
     ResponseEntity<List<Template>> getAll() {
         return new ResponseEntity<List<Template>>(templateRepository.getAll(), HttpStatus.OK);
     }
 
     @PostMapping("/new")
-    @ApiOperation("create new Template")
+    @ApiOperation("Create new template")
     public ResponseEntity<Template> add() {
         Template template = new Template();
         templateRepository.add(template);
