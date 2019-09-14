@@ -20,23 +20,22 @@ repositories {
 
 dependencies {
 
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-    compile "io.vavr:vavr:${vavrVersion}"
+    compile "io.vavr:vavr:$vavrVersion"
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    compile "io.springfox:springfox-swagger2:${swaggerVersion}"
-    compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"
-    compile "io.springfox:springfox-bean-validators:${swaggerVersion}"
+    compile "io.springfox:springfox-swagger2:$swaggerVersion"
+    compile "io.springfox:springfox-swagger-ui:$swaggerVersion"
+    compile "io.springfox:springfox-bean-validators:$swaggerVersion"
 
-    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
-    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
 
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
-    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:${junitVersion}"}
+}
 
 test {
     useJUnitPlatform()
