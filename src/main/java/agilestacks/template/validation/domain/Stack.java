@@ -2,12 +2,14 @@ package agilestacks.template.validation.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import reactor.core.publisher.Flux;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
-class Stack {
+public class Stack {
 
-    private Flux<Component> components;
+    private List<Component> components = new ArrayList<>();
 
 }
