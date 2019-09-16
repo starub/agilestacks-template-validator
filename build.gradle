@@ -13,6 +13,7 @@ def vavrVersion = '0.10.2'
 def cucumberVersion = '4.7.1'
 def swaggerVersion = '2.9.+'
 def junitVersion = '5.5.0'
+def mockitoVersion = '2.+'
 
 repositories {
     mavenCentral()
@@ -34,6 +35,9 @@ dependencies {
     testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-junit-jupiter:$mockitoVersion"
 
 }
 
