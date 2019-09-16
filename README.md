@@ -2,7 +2,8 @@
 
 Topics to discuss :
 
-1) Building & updating stack representation as hierarchical object model, during template creation and configuration.
-2) BDD sanity checks & cross-component validation during dry-run.
-3) Mutation testing.
-4) API documentation
+1) Hierarchical, dynamic template model representation in code.
+2) Cucumber BDD testing and documentation
+3) Mockito mock testing 
+4) API documentation with Swagger.
+5) Mutation testing
