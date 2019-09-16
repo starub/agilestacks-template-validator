@@ -1,6 +1,5 @@
 package agilestacks.template.validation.components.docker;
 
-import com.google.common.base.Strings;
 import io.vavr.collection.CharSeq;
 import io.vavr.collection.Seq;
 import io.vavr.control.Validation;
