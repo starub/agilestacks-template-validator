@@ -1,6 +1,17 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    configurations.maybeCreate('pitest')
+    dependencies {
+        pitest 'org.pitest:pitest-junit5-plugin:0.8'
+    }
+}
+
 plugins {
     id 'java'
     id 'idea'
+    id 'info.solidsoft.pitest' version '1.4.5'
     id 'org.springframework.boot' version '2.1.7.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
@@ -17,6 +28,7 @@ def mockitoVersion = '2.+'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -43,6 +55,14 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+pitest {
+    testPlugin = 'junit5'
+    targetClasses = ['agilestacks.template.validation.*']
+    threads = 4
+    outputFormats = ['HTML']
+    timestampedReports = false
 }
 
 bootJar {

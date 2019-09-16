@@ -16,18 +16,18 @@ public class DockerfileStepDefs {
 
     @Given("Dockerfile with empty FROM field")
     public void parsedDockerfile() {
-        dockerfile = new Dockerfile("", "root");
+        dockerfile = new Dockerfile("", "root","","");
     }
 
     @When("Validating field FROM")
     public void validatingFromField() {
         DockerfileValidator validator = new DockerfileValidator();
-        mandatoryValidation = validator.validate(dockerfile.getFrom(), dockerfile.getUser());
+        mandatoryValidation = validator.mandatoryValidation(dockerfile.getFrom(), dockerfile.getUser());
     }
 
     @Then("Mandatory validation should fail")
     public void validationShouldFail() {
         assertTrue(mandatoryValidation.isInvalid());
-        assertEquals("FROM must not be empty", mandatoryValidation.getError().get(0));
+        assertEquals("FROM must not be empty.", mandatoryValidation.getError().get(0));
     }
 }

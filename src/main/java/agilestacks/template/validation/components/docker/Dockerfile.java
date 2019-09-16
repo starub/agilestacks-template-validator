@@ -12,5 +12,6 @@ public class Dockerfile extends Part {
 
     private String from;
     private String user;
-
+    private String entryPoint;
+    private String cmd;
 }
