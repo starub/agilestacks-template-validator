@@ -21,7 +21,7 @@ targetCompatibility = 11
 
 def lombokVersion = '1.18.10'
 def vavrVersion = '0.10.2'
-def cucumberVersion = '4.7.1'
+def cucumberVersion = '4.7.2'
 def swaggerVersion = '2.9.+'
 def junitVersion = '5.5.0'
 def mockitoVersion = '2.+'
@@ -44,7 +44,7 @@ dependencies {
     compile "io.springfox:springfox-swagger-ui:$swaggerVersion"
     compile "io.springfox:springfox-bean-validators:$swaggerVersion"
 
-    testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-java8:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
 

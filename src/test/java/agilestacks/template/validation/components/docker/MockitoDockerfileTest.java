@@ -23,6 +23,8 @@ class MockitoDockerfileTest {
         when(dockerfile.getFrom()).thenReturn("mockedFrom");
 
         doCallRealMethod().when(dockerfileSpy).setFrom(Mockito.anyString());
+
+        //noinspection ResultOfMethodCallIgnored
         doCallRealMethod().when(dockerfileSpy).getFrom();
 
         dockerfileSpy.setFrom("realFrom");
