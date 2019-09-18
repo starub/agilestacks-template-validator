@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = "pretty", monochrome = true, features = "src/test/resources/components/docker")
+@CucumberOptions(monochrome = true, features = "src/test/resources/components/docker")
 public class CucumberDockerfileTest {
 
     @Test
-    void dummyTest() {
+    void placeholder() {
         //FIXME: Stanislavs Rubens, idea test configuration workaround
     }
 }
