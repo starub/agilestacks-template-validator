@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class PITestDockerfileValidatorTest {
+class MutationDockerfileValidatorTest {
 
     @Test
     void mandatoryValidationValid() {
@@ -29,7 +29,7 @@ class PITestDockerfileValidatorTest {
     void customValidationValid() {
         Dockerfile file = new Dockerfile("FROM","USER","ENTRYPOINT","CMD");
         DockerfileValidator validator = new DockerfileValidator();
-        Validation<Seq<String>, Dockerfile> validation = validator.customValidation(file.getEntryPoint(),file.getCmd());
+        Validation validation = validator.customValidation(file.getEntryPoint(),file.getCmd());
         assertTrue(validation.isValid());
 
     }
