@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = "pretty", features = "src/test/resources/components/docker")
+@CucumberOptions(plugin = "pretty", monochrome = true, features = "src/test/resources/components/docker")
 public class CucumberDockerfileTest {
 
     @Test
