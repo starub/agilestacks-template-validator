@@ -40,7 +40,7 @@ class MutationDockerfileValidatorTest {
 //    void customValidationInvalid() {
 //        Dockerfile file = new Dockerfile("FROM","USER","","");
 //        DockerfileValidator validator = new DockerfileValidator();
-//        Validation<Seq<String>, Dockerfile> validation = validator.customValidation(file.getEntryPoint(),file.getCmd());
+//        Validation validation = validator.custom(file.getEntryPoint(),file.getCmd());
 //        assertTrue(validation.isInvalid());
 //
 //    }
