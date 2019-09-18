@@ -11,6 +11,5 @@ import java.util.List;
 public class Template {
 
     private List<Stack> stacks = new ArrayList<>();
-    ;
 
 }
