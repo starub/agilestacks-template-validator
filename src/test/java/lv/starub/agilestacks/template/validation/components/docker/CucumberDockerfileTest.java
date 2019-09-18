@@ -1,0 +1,16 @@
+package lv.starub.agilestacks.template.validation.components.docker;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = "pretty", monochrome = true, features = "src/test/resources/components/docker")
+public class CucumberDockerfileTest {
+
+    @Test
+    void dummyTest() {
+        //FIXME: Stanislavs Rubens, idea test configuration workaround
+    }
+}

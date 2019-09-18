@@ -2,7 +2,9 @@ buildscript {
     repositories {
         mavenCentral()
     }
+
     configurations.maybeCreate('pitest')
+
     dependencies {
         pitest 'org.pitest:pitest-junit5-plugin:0.8'
     }
@@ -73,7 +75,7 @@ test {
 
 pitest {
     testPlugin = 'junit5'
-    targetClasses = ['agilestacks.template.validation.*']
+    targetClasses = ['lv.starub.agilestacks.template.validation.*']
     threads = 4
     outputFormats = ['HTML']
     timestampedReports = false
@@ -85,7 +87,7 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty','--plugin','json:build/reports/cucumber/cucumber.json', '--glue', 'agilestacks.template.validation', 'src/test/resources']
+            args = ['--plugin', 'pretty', '--plugin', 'json:build/reports/cucumber/cucumber.json', '--glue', 'lv.starub.agilestacks.template.validation', 'src/test/resources']
         }
     }
 }
@@ -93,5 +95,5 @@ task cucumber() {
 generateCucumberReports.dependsOn cucumber
 
 bootJar {
-    mainClassName = 'agilestacks.template.validation.Application'
+    mainClassName = 'lv.starub.agilestacks.template.validation.Application'
 }
